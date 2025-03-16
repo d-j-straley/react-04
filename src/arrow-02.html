@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Arrow Function</h1>
+
+<h2>Implicit Return</h2>
+
+<p>The arrow function expects a return value, and returns the value by default, without the <strong>return</strong> keyword.</p>
+The following works the same way as the previous example, but without the <strong>return</strong> keyword and without the curly braces.  
+In my opinion, this model is more error-prone and obfuscated,
+although this is the in-vogue methodology that all the cool people are using.
+
+<p id="demo"></p>
+  
+<script>
+hello = () => "Hello World!";
+
+document.getElementById("demo").innerHTML = hello();
+</script>
+
+</body>
+</html>
