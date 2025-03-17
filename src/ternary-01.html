@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1 id="demo"></h1>
+
+<script>
+function renderApp() {
+  document.getElementById("demo").innerHTML = "Welcome!";
+}
+
+function renderLogin() {
+  document.getElementById("demo").innerHTML = "Please log in";
+}
+
+let authenticated = false;
+
+authenticated ? renderApp() : renderLogin();
+
+</script>
+
+<p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
+</body>
+</html>
+    
+    <!-- In the code above, we have two functions:  renderApp()  and  renderLogin() . The  renderApp()  function sets the content of the  <h1>  element to "Welcome!", while the  renderLogin()  function sets the content to "Please log in". 
+    We have a variable  authenticated  that is set to  false . We use a ternary operator to check if the  authenticated  variable is  true  or  false . If it is  true , we call the  renderApp()  function, otherwise, we call the  renderLogin()  function. 
+    If you run the code above, you will see that the content of the  <h1>  element is set to "Please log in". 
+    You can try changing the value of the  authenticated  variable to  true  and see the content change to "Welcome!". -->
