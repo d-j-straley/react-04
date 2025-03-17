@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  
+<script>
+    
+    // In the following code, we have a function called  calculate  that takes two arguments  a  and  b . The function calculates the sum, difference, product, and quotient of the two numbers and returns an array containing these values. 
+    // We then use array destructuring to assign the values of the array to the variables  add ,  subtract ,  multiply , and  divide . Finally, we display these values using the  document.write()  method. 
+    // Conclusion 
+    // In this article, we have covered the basics of destructuring in JavaScript. We have seen how to destructure arrays and objects, and how to use destructuring in function parameters. We have also seen how to use destructuring in nested objects and arrays. 
+    // Destructuring is a powerful feature in JavaScript that allows you to extract values from arrays and objects with ease. It can help you write cleaner and more concise code, and make your code more readable and maintainable. 
+    // If you have any questions or comments, please let me know in the comments below. 
+    // Happy coding! 
+    // The post  JavaScript Destructuring: A Comprehensive Guide appeared first on  The Web Dev. 
+    // ]]>
+    
+
+function calculate(a, b) {
+  const add = a + b;
+  const subtract = a - b;
+  const multiply = a * b;
+  const divide = a / b;
+
+  return [add, subtract, multiply, divide];
+}
+
+const [add, subtract, multiply, divide] = calculate(4, 7);
+
+document.write("<p>Sum: " + add + "</p>");
+document.write("<p>Difference " + subtract + "</p>");
+document.write("<p>Product: " + multiply + "</p>");
+document.write("<p>Quotient " + divide + "</p>");
+</script>
+
+</body>
+</html>
