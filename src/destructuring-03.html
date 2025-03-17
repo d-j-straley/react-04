@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p id="demo"></p>
+  
+<script>
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+myVehicle(vehicleOne)
+
+function myVehicle({ model, registration: { state } }) {
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+
+  document.getElementById("demo").innerHTML = message;
+}
+</script>
+
+</body>
+</html>
+<!-- In this example, we have a nested object called  registration  inside the  vehicleOne  object. We use destructuring to extract the  model  and  state  properties from the  vehicleOne  object. We also destructure the  registration  object to extract the  state  property. We then use these values to construct a message that displays the model of the vehicle and the state where it is registered. -->
+ 
