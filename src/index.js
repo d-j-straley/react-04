@@ -8,19 +8,22 @@ import ReactDOM from 'react-dom/client';
 // const myElement = <ul>{myList}</ul>;
 
 
-const myElement = (
-    <table>
-        <tr>
-            <th>Name</th>
-        </tr>
-        <tr>
-            <td>John</td>
-        </tr>
-        <tr>
-            <td>Elsa</td>
-        </tr>   
-    </table>
-);
+// const myElement = (
+//     <table>
+//         <tr>
+//             <th>Name</th>
+//         </tr>
+//         <tr>
+//             <td>John</td>
+//         </tr>
+//         <tr>
+//             <td>Elsa</td>
+//         </tr>   
+//     </table>
+// );
+
+const myElement = <h1>Hello World</h1>
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
