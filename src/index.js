@@ -22,7 +22,18 @@ import ReactDOM from 'react-dom/client';
 //     </table>
 // );
 
-const myElement = <h1>Hello World</h1>
+// const myElement = <h1>Hello World</h1>
+ 
+const x = 5;
+const text = "";
+const myElement = (
+    <div>
+        <h1>Hello World</h1>
+        {x > 5 ? <p>Yes</p> : <p>No</p>}
+        {text || <p>Text is empty</p>}
+    </div>
+);
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
