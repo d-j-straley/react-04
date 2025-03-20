@@ -24,18 +24,22 @@ import ReactDOM from 'react-dom/client';
 
 // const myElement = <h1>Hello World</h1>
  
-const x = 5;
-const text = "";
-const myElement = (
-    <div>
-        <h1>Hello World</h1>
-        {x > 5 ? <p>Yes</p> : <p>No</p>}
-        {text || <p>Text is empty</p>}
-    </div>
-);
+// const x = 5;
+// const text = "";
+// const myElement = (
+//     <div>
+//         <h1>Hello World</h1>
+//         {x > 5 ? <p>Yes</p> : <p>No</p>}
+//         {text || <p>Text is empty</p>}
+//     </div>
+// );
 
+function Honda()
+{
+    return <h2>This is the output of Honda function!</h2>;
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(myElement);
+root.render(<Honda/>);
