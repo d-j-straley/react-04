@@ -36,7 +36,7 @@ import ReactDOM from 'react-dom/client';
 
 function Honda()
 {
-    return <h2>This is the output of Honda function!</h2>;
+    return <h2>This is the output of a Honda function!</h2>;
 }
 
 
