@@ -35,13 +35,23 @@ import ReactDOM from 'react-dom/client';
 // );
 
 
-function Honda(props)
+function Honda()
 {
-    return <h2>This is the output of a Honda function in {props.color}!</h2>;
+    return <h2>This is the output of a Honda function!</h2>;
 }
 
+function Garage()
+{
+    return (
+        <div>
+            <h1>Who lives in my garage?</h1>
+            <Honda />
+        </div>
+    );
+}   
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Honda color="red"/>);
+
+root.render(<Garage/>);
 
