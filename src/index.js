@@ -34,12 +34,14 @@ import ReactDOM from 'react-dom/client';
 //     </div>
 // );
 
-function Honda()
+
+function Honda(props)
 {
-    return <h2>This is the output of a Honda function!</h2>;
+    return <h2>This is the output of a Honda function in {props.color}!</h2>;
 }
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Honda/>);
+root.render(<Honda color="red"/>);
+
