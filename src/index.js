@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Car from './Car';
+
 
 // const myElement = <h1>Hello React!</h1>
 
@@ -53,5 +55,5 @@ function Garage()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-root.render(<Garage/>);
+root.render(<Car/>);
 
