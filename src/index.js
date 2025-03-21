@@ -36,6 +36,13 @@ import Car from './Car';
 //     </div>
 // );
 
+class Coup extends React.Component
+{
+    render()
+    {
+        return <h2>This is a Coup class!</h2>;
+    }
+}
 
 function Honda()
 {
@@ -55,5 +62,5 @@ function Garage()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-root.render(<Car/>);
+root.render(<Coup/>);
 
