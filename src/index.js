@@ -36,21 +36,39 @@ import Car from './Car';
 //     </div>
 // );
 
-class Cycle extends React.Component
+// class Cycle extends React.Component
+// {
+//     constructor()
+//     {
+//         super
+//         (
+//             console.log("The Cycle class has been constructed!")
+//         );
+//         this.state = {color: "red"};
+//     }
+//     render()
+//     {
+//         return <h2>This is a {this.state.color} Cycle class!</h2>;
+//     }
+// }
+
+class Pickup extends React.Component
 {
-    constructor()
+    constructor(props)
     {
-        super
-        (
-            console.log("The Cycle class has been constructed!")
-        );
-        this.state = {color: "red"};
-    }
+        super(props);
+    }    
     render()
     {
-        return <h2>This is a {this.state.color} Cycle class!</h2>;
+        return <h2>This is a {this.props.brand} Pickup class!</h2>;
     }
 }
+
+
+
+
+
+
 
 class Coup extends React.Component
 {
@@ -78,5 +96,5 @@ function Garage()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-root.render(<Cycle/>);
+root.render(<Pickup brand="Toyota"/>);
 
