@@ -78,23 +78,44 @@ class Coup extends React.Component
     }
 }
 
-function Honda()
+// function Honda()
+// {
+//     return <h2>This is the output of a Honda function!</h2>;
+// }
+
+// function Garage()
+// {
+//     return (
+//         <div>
+//             <h1>Who lives in my garage?</h1>
+//             <Honda />
+//         </div>
+//     );
+// }   
+
+class Mercedes extends React.Component
 {
-    return <h2>This is the output of a Honda function!</h2>;
+    render()
+    {
+        return <h2>This is a Mercedes class!</h2>;
+    }
 }
 
-function Garage()
+class Garage extends React.Component
 {
-    return (
-        <div>
-            <h1>Who lives in my garage?</h1>
-            <Honda />
-        </div>
-    );
-}   
+    render()
+    {
+        return (
+            <div>
+                <h1>Who lives in my garage?</h1>
+                <Mercedes />
+            </div>
+        );
+    }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-root.render(<Pickup brand="Toyota"/>);
+root.render(<Garage />);
 
