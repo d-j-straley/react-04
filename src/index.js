@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Car from './Car';
+// import Car from './Car';
+// import Mercedes from './Mercedes';
 
 
 // const myElement = <h1>Hello React!</h1>
@@ -57,10 +58,24 @@ class Pickup extends React.Component
     constructor(props)
     {
         super(props);
+        this.state = 
+        {
+            brand: "Ford",
+            model: "F-150",
+            color: "blue",
+            year: 2021
+        };
     }    
     render()
     {
-        return <h2>This is a {this.props.brand} Pickup class!</h2>;
+        return (
+            <div>
+                <h2>This is a {this.state.brand} Pickup class!</h2>
+                <p>
+                    It is a {this.state.color} {this.state.model} from {this.state.year}.
+                </p>
+            </div>
+        );
     }
 }
 
@@ -70,13 +85,13 @@ class Pickup extends React.Component
 
 
 
-class Coup extends React.Component
-{
-    render()
-    {
-        return <h2>This is a Coup class!</h2>;
-    }
-}
+// class Coup extends React.Component
+// {
+//     render()
+//     {
+//         return <h2>This is a Coup class!</h2>;
+//     }
+// }
 
 // function Honda()
 // {
@@ -93,29 +108,29 @@ class Coup extends React.Component
 //     );
 // }   
 
-class Mercedes extends React.Component
-{
-    render()
-    {
-        return <h2>This is a Mercedes class!</h2>;
-    }
-}
+// class Mercedes extends React.Component
+// {
+//     render()
+//     {
+//         return <h2>This is a Mercedes class!</h2>;
+//     }
+// }
 
-class Garage extends React.Component
-{
-    render()
-    {
-        return (
-            <div>
-                <h1>Who lives in my garage?</h1>
-                <Mercedes />
-            </div>
-        );
-    }
-}
+// class Garage extends React.Component
+// {
+//     render()
+//     {
+//         return (
+//             <div>
+//                 <h1>Who lives in my garage?</h1>
+//                 <Mercedes />
+//             </div>
+//         );
+//     }
+// }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-root.render(<Garage />);
+root.render(<Pickup />);
 
