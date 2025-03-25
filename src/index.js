@@ -66,6 +66,19 @@ class Pickup extends React.Component
             year: 2021
         };
     }    
+
+    changeColor = () => 
+    {
+        if (this.state.color === "blue")
+        {
+            this.setState({ color: "red" });
+        }
+        else
+        {   
+            this.setState({ color: "blue" });
+        }
+    }
+
     render()
     {
         return (
@@ -74,6 +87,7 @@ class Pickup extends React.Component
                 <p>
                     It is a {this.state.color} {this.state.model} from {this.state.year}.
                 </p>
+                <button type="button" onClick={this.changeColor}>Change color</button>
             </div>
         );
     }
