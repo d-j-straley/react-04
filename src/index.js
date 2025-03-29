@@ -1,7 +1,5 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -12,20 +10,15 @@ class Header extends React.Component {
       this.setState({favoritecolor: "yellow"})
     }, 1000)
   }
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    document.getElementById("div1").innerHTML =
-    "Before the update, the favorite was " + prevState.favoritecolor;
-  }
   componentDidUpdate() {
-    document.getElementById("div2").innerHTML =
+    document.getElementById("mydiv").innerHTML =
     "The updated favorite is " + this.state.favoritecolor;
   }
   render() {
     return (
       <div>
       <h1>My Favorite Color is {this.state.favoritecolor}</h1>
-      <div id="div1"></div>
-      <div id="div2"></div>
+      <div id="mydiv"></div>
       </div>
     );
   }
@@ -33,4 +26,3 @@ class Header extends React.Component {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Header />);
-
