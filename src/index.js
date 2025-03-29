@@ -53,6 +53,8 @@ import ReactDOM from 'react-dom/client';
 //     }
 // }
 
+
+/*
 class Pickup extends React.Component
 {
     constructor(props)
@@ -92,6 +94,8 @@ class Pickup extends React.Component
         );
     }
 }
+*/
+
 
 
 
@@ -143,8 +147,32 @@ class Pickup extends React.Component
 //     }
 // }
 
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  static getDerivedStateFromProps(props, state) {
+    return {favoritecolor: props.favcol };
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header favcol="yellow" />);
 
 
+/*
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Pickup />);
-
+*/
