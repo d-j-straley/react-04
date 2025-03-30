@@ -10,6 +10,14 @@ function MyForm() {
     setInputs(values => ({...values, [name]: value}))
   }
 
+  /* Note that we use this one event handler for both fields.
+  Although we could have attached separate event handlers to each field,
+  this is a more efficient way to handle the change events,
+  and is also cleaner and preferred in React.
+  This is a common pattern in React, where we use a single event handler
+  to handle multiple inputs.
+  */
+   
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
