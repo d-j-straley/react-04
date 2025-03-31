@@ -1,23 +1,11 @@
-import { useState } from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-function MyForm() {
-  const [myCar, setMyCar] = useState("Volvo");
-
-  const handleChange = (event) => {
-    setMyCar(event.target.value)
-  }
-
-  return (
-    <form>
-      <select value={myCar} onChange={handleChange}>
-        <option value="Ford">Ford</option>
-        <option value="Volvo">Volvo</option>
-        <option value="Fiat">Fiat</option>
-      </select>
-    </form>
-  )
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
 }
 
+const myElement = <Car brand="Chevy" />;
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
+root.render(myElement);
