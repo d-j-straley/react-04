@@ -18,4 +18,5 @@ function Goal(props) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Goal isGoal={false} />);
+// Note taht if a value is passed in which does not resolve to either true or false, the component will not render anything.
+root.render(<Goal isGoal={true} />);
