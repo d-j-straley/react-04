@@ -1,20 +1,21 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Football() {
-  const shoot = (a, b) => {
-    alert(b.type);
-		/*
-		'b' represents the React event that triggered the function.
-    In this case, the 'click' event
-		*/
-  }
+function MissedGoal() {
+	return <h1>MISSED!</h1>;
+}
 
-  return (
-    <button onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
-  );
+function MadeGoal() {
+	return <h1>GOAL!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
+root.render(<Goal isGoal={false} />);
