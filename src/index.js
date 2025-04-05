@@ -1,25 +1,27 @@
-import React from 'react';
+import { useState } from "react";
 import ReactDOM from 'react-dom/client';
 
-function Car(props) {
-  return <li>I am a { props.brand }</li>;
-}
+function MyForm() {
+  const [name, setName] = useState("");
 
-function Garage() {
-  const cars = [
-    {id: 1, brand: 'Toyota'},
-    {id: 2, brand: 'BMW'},
-    {id: 3, brand: 'Audi'}
-  ];
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`);
+  }
+
   return (
-    <>
-	    <h1>Who lives in my garage?</h1>
-	    <ul>
-        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
-      </ul>
-    </>
-  );
+    <form onSubmit={handleSubmit}>
+      <label>Enter your name:
+        <input 
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <input type="submit" />
+    </form>
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
+root.render(<MyForm />);
