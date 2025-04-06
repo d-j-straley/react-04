@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './styles01.css';
+
+/*
+ * note that when importing a separate CSS file,
+ * that file is written in normal CSS syntax, using
+ * normal CSS selectors, not CSS-in-JS syntax camelCase
+ * styles.
+ */
 
 const Header = () => {
-  const myStyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "50px",
-    fontFamily: "Sans-Serif",
-    textAlign: "center",
-    fontSize: "20px",
-  };
   return (
     <>
-      <h1 style={myStyle}>Hello Style!</h1>
-      <p>Add a little style!</p>
+      <h1>Hello Style!</h1>
+      <p>Add a little style!.</p>
     </>
   );
 }
