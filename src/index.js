@@ -1,24 +1,27 @@
-
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
 
-
+// Note that here we are tracking just one single object: car.
+// And we have various properties of the car which get tracked in the same state object.
 function Car() {
-  const [brand, setBrand] = useState("Ford");
-  const [model, setModel] = useState("Mustang");
-  const [year, setYear] = useState("1964");
-  const [color, setColor] = useState("red");
-  
+  const [car, setCar] = useState({
+    brand: "Ford",
+    model: "Mustang",
+    year: "1964",
+    color: "red"
+  });
+
+    // we reference the properties of the car object using dot notation (of course).
+    
   return (
     <>
-      <h1>My {brand}</h1>
+      <h1>My {car.brand}</h1>
       <p>
-        It is a {color} {model} from {year}.
+        It is a {car.color} {car.model} from {car.year}.
       </p>
     </>
   )
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Car />);
