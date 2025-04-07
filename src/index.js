@@ -5,13 +5,13 @@ function Car() {
   const [car, setCar] = useState({
     brand: "Ford",
     model: "Mustang",
-    year: "1964",
+    year: 1964,
     color: "red"
   });
   
   const updateColor = () => {
     setCar(previousState => {
-      return { ...previousState, year: "1965" }
+      return { ...previousState, year: 1970 }
     });
   }
 
