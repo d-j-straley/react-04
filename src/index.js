@@ -9,9 +9,12 @@ function Car() {
     color: "red"
   });
   
+    // the following increments the year of the car.
+    // note how it is done
   const updateColor = () => {
     setCar(previousState => {
-      return { ...previousState, year: 1970 }
+        return { ...previousState, year: car.year + 1 } 
+        
     });
   }
 
