@@ -35,8 +35,12 @@ const App = () => {
 
 const expensiveCalculation = (num) => {
   console.log("Calculating...");
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 1000000000; i++) {
     num += 1;
   }
   return num;
 };
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
