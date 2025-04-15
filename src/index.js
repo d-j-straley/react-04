@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import ReactDOM from "react-dom/client";
 
-/*
-Note that this is the application *before* the optimization.
-In other words, we have not yet added the useMemo ( ) hook.
-*/ 
+/* 
+This now added the useMemo () hook so as to avoid the expensive calculation
+when the count is not changed.
+*/
 
 const App = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
-  const calculation = expensiveCalculation(count);
+  const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
   const increment = () => {
     setCount((c) => c + 1);
@@ -48,4 +48,3 @@ const expensiveCalculation = (num) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
