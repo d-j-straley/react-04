@@ -1,6 +1,11 @@
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
 
+/*
+Note that this is the application *before* the optimization.
+In other words, we have not yet added the useMemo ( ) hook.
+*/ 
+
 const App = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
