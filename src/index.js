@@ -9,12 +9,12 @@ const Home = () => {
   */
   return (
     <>
-      <ul>
+      <ol>
       {data &&
         data.map((item) => {
           return <li key={item.id}>{item.title}</li>;
         })}
-        </ul>
+        </ol>
     </>
   );
 };
