@@ -4,12 +4,17 @@ import useFetch from "./useFetch";
 const Home = () => {
   const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
+  /*
+   * below, I modified the return to create an unordered list
+  */
   return (
     <>
+      <ul>
       {data &&
         data.map((item) => {
-          return <p key={item.id}>{item.title}</p>;
+          return <li key={item.id}>{item.title}</li>;
         })}
+        </ul>
     </>
   );
 };
