@@ -5,7 +5,7 @@ const Home = () => {
   const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
   /*
-   * below, I modified the return to create an unordered list
+   * below, I modified the return to create an ordered list
   */
   return (
     <>
